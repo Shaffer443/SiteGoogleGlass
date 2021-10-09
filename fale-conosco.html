@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+	<meta charset="UTF-8"/>
+	<title>Tudo Sobre Google Glass</title>
+
+	<link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="_css/form.css"/>
+
+    <script> 
+
+        function calculototal(){ /*funcão de nome calculototal, usado no oninput para calcular o valor*/
+
+            var qtd = parseInt(document.getElementById('cnumber').value);
+                                                                                /*qtd - quantidade.*/
+                                                                                /*parseInt - Valor só pode ser inteiro. não "float"*/
+                                                                                /* cnumber - ID do elemento alvo */
+        
+        
+            tot = qtd * 1500; /*criada a função tot == total, que pega a variável qtd (quantidade) e multiplica por 1500 (valor da unidade do produto)*/
+
+            document.getElementById('cvalor').value = tot; /*criado o documento, referente ao elemento 'cvalor' (ID do campo onde mostra o valor total da compra), e colocado o VALUE (valor) = TOT (total da compra, do pedido )*/
+        
+                                                                            }
+
+
+    </script><!--criado aqui mesmo para o cálculo total do pedido-->
+
+
+</head>
+
+<script lang="javascript" src="_javascript/funcoes.js">
+
+</script>
+
+<body>
+	<div id="interface">
+
+<header id="cabecalho">
+
+<hgroup>
+<h1>Google Glass</h1>
+<h2>A revolução do Google está chegando</h2>
+</hgroup>
+
+<img id= "icone" src="/home/shaffer/Documentos/Curso Em Vídeo/projeto-glass-html5/_imagens/glass-oculos-preto-peq.png">
+
+<nav id="menu">  
+	<h1>Menu Principal</h1>
+	<ul>
+	<li onmouseover="mudafoto('_imagens/home.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="index.html" target="_self">Home</a></li>
+	<li onmouseover="mudafoto('_imagens/especificacoes.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+	<li onmouseover="mudafoto('_imagens/fotos.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+	<li onmouseover="mudafoto('_imagens/multimidia.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+	<li onmouseover="mudafoto('_imagens/contato.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+	</ul>
+</nav>
+
+</header>
+
+<section id="corpo-full"> <!--Uma nova sessão para um página completa, sem divisões-->
+	<article id="noticia-principal"> 	
+
+
+		<header id="cabeartigo">
+		
+			<hgroup>
+		
+				<h3>Fale Conosco > Contato</h3>
+				<h1>Formulário de Contato</h1>
+				<h2>por Rafael Gouveia</h2>
+				<h3 class="outro">Atualizado em 01/Maio/2013</h3>
+		
+			</hgroup>
+		</header>
+
+                    <form method="POST" id="fcontato" action="mailto:shaffer443@yahoo.com.br" oninput="calculototal();"> <!--Tag usada para criação de formulários--> <!--parametro oninput, para disparar o javascript de cálculo do pedido automaticamente-->
+                        <!--o mailto: não funciona sem um cliente de email configurado na maquina ou PHP configurados. Meramente ilustrativo para esta página-->
+                        
+                        <fieldset id="usuario"> <!-- Significa Conjunto de campus, uma área delimitidade para esté campo-->
+                        <legend>Identificação do Usuário</legend> <!--Cria o título do <fieldser>-->
+                            <p><label for="cnome">Nome: </label> <input type="text" name="tnome" id="cnome" size="60" maxlength="65" placeholder="Nome Completo"/></p>
+                            <p><label for="csenha">Senha: </label> <input type="password" name="tsenha" id="csenha" size="15" maxlength="15" min="6" max="15" placeholder="senha"></p>
+                            <p><label for="cemail">E-mail: </label> <input type="email" name="temail" id="cemail" size="25" maxlength="30" placeholder="E-mail com @"></p>
+                            <fieldset id="sexo"><legend>Gênero:</legend>
+                                <input type="radio" name="tsexo" id="cmasc"/><label for="cmasc"> Masculino </label><!--O Name igual, é para aceitar apenas uma seleção na bolinha "radio"-->
+                                <input type="radio" name="tsexo" id="cfem"/><label for="cfem"> Feminino </label> <!--<Label> assimilado a um objeto, faz com que clicando no nome tb marque a opção-->
+                            </fieldset>
+                            <p><label for="cdate">Data de Nascimento: </label> <input type="date" name="tdate" id="cdate"></p>
+                        </fieldset>
+                       
+                        <fieldset id="endereco">
+                        <legend>Endereço do Usuário</legend>
+                            <p><label for="cendereco">Logradouro: </label><input type="text" name="tendereco" id="cendereco" size="60" maxlength="65" placeholder="Rua/Avenida/Travessa"/></p>
+                            <p><label>Número: </label><input type="number" name="tnumero" id="cnumero" min="0" max="999999" /></p><!--Aparece em uma caixa, podendo preencher com click nas setas-->
+                            <p><labe for="cestado">Estado: </labe>
+                            <select name="testado" id="cestado"> <!--Usado para configurar caixas combinadas de opções-->
+                               <option>Acre</option> <!--Usado para inserir entre eles as opções desejadas. NO caso, serão os estados-->
+                               <option>Alagoas</option>
+                               <option>Amapá</option>
+                               <option>Amazonas</option>
+                               <option>Bahia</option>
+                               <option>Ceará</option>
+                               <option>Distrito Federal</option>
+                               <option>Espirito Santo</option>
+                               <option>Goiás</option>
+                               <option>Maranhão</option>
+                               <option>Mato Grosso</option>
+                               <option>Mato Grosso do Sul</option>
+                               <option>Minas Gerais</option>
+                               <option>Pará</option>
+                               <option>Paraíba</option>
+                               <option>Paraná</option>
+                               <option>Pernambuco</option>
+                               <option>Piauí</option>
+                               <option>Rio de Janeiro</option>
+                               <option>Rio Grande do Sul</option>
+                               <option>Rio Grande do Norte</option>
+                               <option>Rondônia</option>
+                               <option>Santa Catarina</option>
+                               <option>São Paulo</option>
+                               <option>Sergipe</option>
+                               <option>Tocantins</option>
+
+                            </select></p>
+                            
+                            <p><label for="ccidades">Cidade: </label>
+                                <input type="text" name="tcidade" id="ccidade" maxlength="25" size="25" list="cidades" placeholder="Sua Cidade"> <!--Chamar a lista atraves do ID do <datalist> no campo *list=""-->
+                                <datalist id="cidades"> <!--Inserir as cidades dentro da lista <datalist-->
+                                    
+                                    <option value="Recife"></option> <!--Opções de cidades-->
+                                    <option value="Jaboatão Dos GUararapes"></option>
+                                    <option value="Olinda"></option>
+
+
+                                </datalist>
+                            </p>
+                        </fieldset>
+                       
+                        <fieldset id="mensagem">
+                        <legend>Mensagem do Usuário</legend>
+                            <p><label for="curgencia">Grau de Urgência: </label>
+                            
+                                Mínimo<input type="range" name="turgencia" id="curgencia" min="1" max="10" step="1">Máximo <!--Min e Max, são os valores dentro da barra. STEP- o salto, de quanto em quanto a barra vai pular os valores-->
+
+                            </p>
+                            <p><label for="">Mensagem: </label>
+                                
+                                <textarea name="tmensagem" id="cmensagem" cols="50" rows="20" placeholder="Escreve Sua Mensagem">
+                                    
+                                </textarea><!--Não precisei escrever nada entre as tags-->
+                            
+                            </p>
+                        </fieldset>
+                       
+                        <fieldset id="pedido">
+                        <legend>Quero um Google Glass</legend>
+                            <p><input type="checkbox" name="tpedido" id="cpedido" ><label for="cpedido">Gostaria de adquirir um Google Glass quando disponível</label></p> <!--Type usado foi o checkbox-->
+                            <p><label for="cclor">Cor: </label><input type="color" name="tcolor" id="ccolor" ></p> <!--Type usado foi o color-->
+                            <p><label for="cnumber">Quantidade: </label><input type="number" name="tnumber" id="cnumber" min="1" max="99"></p> <!--Type usado foi o number, com parâmetros: min e max-->
+                            <p><label for="cvalor">Preço Total: R$ </label><input type="text" name="tvalor" id="cvalor" readonly placeholder="Valor Total"></p> <!--Type usado foi o text, com o parametro de readonly (somente leitura), assim, para o usuário não inputar valores, o sistema colocará automaticamente. Essa é a intenção-->
+                        </fieldset>
+
+                        <input type="image" id="imgenviar" src="_imagens/botao-enviar.png" values="enviar">
+
+                    </form>
+
+
+</article>
+    </section>
+
+
+<footer id="rodape">
+
+    <p>Copyright &copy; <s>2013</s> 2021 - by <u>Rafael Gouveia.</u><br>
+        <a href="https://www.instagram.com/rafaelgouveiashaffer/" target="_blank">Instagram</a> | <a href="https://twitter.com/RafaelGouveiaM" target="_blank">Twitter</a> | <a href="https://github.com/Shaffer443" target="_blank">Git Hub</a></p>
+    
+    </footer>
+    
+    </div>
+    </body>
+    </html>

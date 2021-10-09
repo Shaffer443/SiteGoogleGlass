@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+ul#album-fotos{ /*configurações <UL>*/
+
+    width: 700px; /* Largura*/
+    margin: 0 auto; /* esta com 0 (zero) na esquerda e automático nas outras*/
+    padding: 50px;
+    overflow: hidden;
+    list-style: none; /*tira todas as marcações da lista*/
+
+}
+
+    ul#album-fotos li { /* configurando o <li> da <ul> */
+
+        float: left; /*faz com que cada um fique a esquerda do outro. e não mais uma acima do outro*/
+        width: 200px;
+        height: 200px; /* altura */
+        margin: 10px;
+        border: 5px solid white;
+        background-color: white;
+        box-shadow: 1px 1px 3px rgba(0,0,0,.4);
+        -webkit-transition: all 0.3s ease-in; /*transição da iamgem. visualiza quando se cria o :hover. Configurações: alvo -tempo de transição - tipo de efeito*/
+        
+    }
+
+            ul#album-fotos li:hover{ /*Aumento da scala do <li> em 50% maior*/
+
+                -webkit-transform: scale(1.5);/*aumenta em 50% a mais do que está configurada*/
+
+            }
+                ul#album-fotos li:hover span{ /*usando o span, que é o texto nas imagens aparecer quando ṕassar o mouse*/
+
+                    opacity: 1; /*assim sairá de zero (0) para 1 e aparecerá*/
+
+                }
+
+                        ul#album-fotos li span{ /*Configurando todos os <li> que tiverem <span> dentro*/
+
+                            opacity: 0; /*esconde os nomes nas imagens*/
+                            color: white; /*cor do texto*/
+                            text-shadow: 1px 1px 1px black; /*sombra no texto*/
+                            background-color: rgba(0,0,0,.3); /*mascara escura por trás do texto*/
+                            font-size: 9pt; /*tamanho da fonte*/
+                            line-height: 370px; /* "altura da linha" - faz com que o texto desça no espaço onde está alocado*/
+                            padding: 4px; /* largura do centro interno para as margens*/
+
+                        }
+
+                            ul#album-fotos li#foto01{ /* Informa a edição no quadrante foto01 do <li> especificamente*/
+
+                                background: url('../_imagens/galeria-01.jpg') no-repeat; /* indicamos a foto especifica para o fundo deste quadro. Lembrar de usa '' aspas simples e '../' para entrar nas pastas. Usar no-repeat para a imagem não se repetir*/
+                                background-size: 400px 400px; /*tamanho original da imagem na hora da expansão. recomendado colocar*/
+                            }
+
+                            ul#album-fotos li#foto01:hover{ /*praticamento dando um zoom inverso para a melhor alocação e visualização da imagem antes de ampliar*/
+
+                                background-position: 0px 0px; /*centralizar a aimagem para ampliar com o zoom*/
+                                background-size: 200px 200px; /*reduzindo o tamanho para centralizar*/
+
+                            }
+
+                                ul#album-fotos li#foto02{ /* Informa a edição no quadrante foto02 do <li> especificamente*/
+
+                                    background: url('../_imagens/galeria-02.jpg') no-repeat; /* indicamos a foto especifica para o fundo deste quadro. Lembrar de usa '' aspas simples e '../' para entrar nas pastas. Usar no-repeat para a imagem não se repetir*/
+                                    background-size: 400px 400px; /*tamanho original da imagem na hora da expansão. recomendado colocar*/
+                                }
+
+                                ul#album-fotos li#foto02:hover{ /*praticamento dando um zoom inverso para a melhor alocação e visualização da imagem antes de ampliar*/
+
+                                    background-position: 0px 0px; /*centralizar a aimagem para ampliar com o zoom*/
+                                    background-size: 200px 200px; /*reduzindo o tamanho para centralizar*/
+    
+                                }
+                        
+                                    ul#album-fotos li#foto03{ /* Informa a edição no quadrante foto03 do <li> especificamente*/
+
+                                        background: url('../_imagens/galeria-03.jpg') no-repeat; /* indicamos a foto especifica para o fundo deste quadro. Lembrar de usa '' aspas simples e '../' para entrar nas pastas. Usar no-repeat para a imagem não se repetir*/
+                                        background-size: 400px 400px; /*tamanho original da imagem na hora da expansão. recomendado colocar*/
+                                    }
+
+                                    ul#album-fotos li#foto03:hover{ /*praticamento dando um zoom inverso para a melhor alocação e visualização da imagem antes de ampliar*/
+
+                                        background-position: 0px 0px; /*centralizar a aimagem para ampliar com o zoom*/
+                                        background-size: 200px 200px; /*reduzindo o tamanho para centralizar*/
+        
+                                    }
+                    
+                                        ul#album-fotos li#foto04{ /* Informa a edição no quadrante foto04 do <li> especificamente*/
+
+                                            background: url('../_imagens/galeria-04.jpg') no-repeat; /* indicamos a foto especifica para o fundo deste quadro. Lembrar de usa '' aspas simples e '../' para entrar nas pastas. Usar no-repeat para a imagem não se repetir*/
+                                            background-position: 50% 50%; /* deixa o centro da imagem como partida na hora do zoom, e também no quadrante do seu quadrado*/
+                                            background-size: 400px 400px; /*tamanho original da imagem na hora da expansão. recomendado colocar*/
+                                        }
+
+                                        ul#album-fotos li#foto04:hover{ /*praticamento dando um zoom inverso para a melhor alocação e visualização da imagem antes de ampliar*/
+
+                                            background-position: 0px 0px; /*centralizar a aimagem para ampliar com o zoom*/
+                                            background-size: 200px 200px; /*reduzindo o tamanho para centralizar*/
+            
+                                        }
+                        
+                                            ul#album-fotos li#foto05{ /* Informa a edição no quadrante foto05 do <li> especificamente*/
+
+                                                background: url('../_imagens/galeria-05.jpg') no-repeat; /* indicamos a foto especifica para o fundo deste quadro. Lembrar de usa '' aspas simples e '../' para entrar nas pastas. Usar no-repeat para a imagem não se repetir*/
+                                                background-size: 400px 400px; /*tamanho original da imagem na hora da expansão. recomendado colocar*/
+                                                background-position: 50% 50%; /* deixa o centro da imagem como partida na hora do zoom, e também no quadrante do seu quadrado*/
+                                            }
+
+                                            ul#album-fotos li#foto05:hover{ /*praticamento dando um zoom inverso para a melhor alocação e visualização da imagem antes de ampliar*/
+
+                                                background-position: 0px 0px; /*centralizar a aimagem para ampliar com o zoom*/
+                                                background-size: 200px 200px; /*reduzindo o tamanho para centralizar*/
+                
+                                            }
+                        
+                                                ul#album-fotos li#foto06{ /* Informa a edição no quadrante foto06 do <li> especificamente*/
+
+                                                    background: url('../_imagens/galeria-06.jpg') no-repeat; /* indicamos a foto especifica para o fundo deste quadro. Lembrar de usa '' aspas simples e '../' para entrar nas pastas. Usar no-repeat para a imagem não se repetir*/
+                                                    background-size: 400px 400px; /*tamanho original da imagem na hora da expansão. recomendado colocar*/
+                                                    background-position: 50% 50%; /* deixa o centro da imagem como partida na hora do zoom, e também no quadrante do seu quadrado*/
+                                                }
+
+                                                ul#album-fotos li#foto06:hover{ /*praticamento dando um zoom inverso para a melhor alocação e visualização da imagem antes de ampliar*/
+
+                                                    background-position: 0px 0px; /*centralizar a aimagem para ampliar com o zoom*/
+                                                    background-size: 200px 200px; /*reduzindo o tamanho para centralizar*/
+                    
+                                                }

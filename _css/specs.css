@@ -1,0 +1,32 @@
+@charset "UTF-8"; /*Não esquecer de colocar logo no início para não dar erro de linguagem escrita*/
+
+    section#conteudo{
+
+            /*Ajustes gerais da tag conteudo da página specs.heml*/
+
+        width: 1000px; /*Largura*/
+        margin: auto; /* Conteudo ficará centralizado na tela independetemente do espaço que ele ocupe*/
+
+
+    }
+
+        iframe#frame-spec {
+
+            /* Configuração do <iframe> com o id frame-spac*/
+
+            width: 400px; /* Largura */
+            height: 280px; /* Altura*/
+            border: none; /* Removendo a borda */
+            overflow: hidden; /* Evita que a rolagem aconteça. POde não funcionar em todos os navegadores */
+
+
+        }
+
+            /*iframe#frame-spec::-webkit-scrollbar { 
+
+                display: none; /* Retirando a barra de rolamento do iframe 
+                
+                Retirei de outra forma, direto na tag <iframe> no html
+
+            } */
+

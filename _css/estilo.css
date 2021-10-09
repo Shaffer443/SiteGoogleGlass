@@ -1,0 +1,382 @@
+@charset "utf-8";
+
+/*Adicionado uma fonte externa do Google fonts. para usar esta finte use: font-family: 'Titillium Web', sans-serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+
+/*Adicionei um fonte externa com o código abaixo.*/
+
+@font-face {
+    font-family: 'fontenova';
+    src: url(../_fonts/computer-font.ttf);
+}
+
+/* formatação da página geral*/
+
+body{ background-color: #bbbbbb }
+
+/* formatação do container <div></div>*/
+
+div#interface{
+
+    background-color: white; /*usado esta cor para diferenciar do fundo para configuração do conteiner e observar as diferenças mias nitidamente. POde-se alterar pós conclusão*/
+    width: 1100px; /* delimita o tamanho do conteiner desta div. no caso, 800px é o espaço que ela vai ocupar dentro do absoluto do site*/
+    margin: -20px auto 0px auto; /* margens na ordem (cima, direita, baixo, esquerda), configuração das margens do conteiner <div> em relação ao site (absoluto)*/
+    box-shadow: 0px 0px 10px black ;/*configura um degradê na borda do conteiner <div> ordem: deslocamento lateral, deslocamento vertical, espalahemtno da sombra e cor da sombra*/
+    padding: 10px 10px 10px 10px; /* faz com que se deixe um espaço dentro das margens da <div>, configuração em relação as margens internas do container <div>. usa-se o mesmo padrão do margin: cima, direita, baixo, esquerda.*/
+
+    }
+
+
+    /* formatação geral do cabeçalho <p></p>*/
+
+    p{ text-align: justify;
+    text-indent: 50px; }
+
+    a { /*Formatação para os link de todo o texto. Hiperlink e clicáveis no texto*/
+
+        text-decoration: none; /* sem formataçao*/
+
+    }
+
+        a:hover{ /*configuração do hiperlink no texto quando passar o mouse.*/
+
+            text-decoration: underline; /*sumblinhado quando passar o mouse*/
+
+        }
+
+
+/*formatação da imagem alvo no cabeçalho*/
+
+header#cabecalho img#icone{
+
+    /* ideia desta configuração é deixar ele quase saindo do conteiner <div>, configuranado a imagem que está dentro da pagina,e não do <div>*/
+
+    position: absolute; /*pois está em relação ao site em geral.*/
+    left: 1050px; /*configuração onde ele vai ficar em relação ao todo do site em relação ao lado esquerdo. seu posicionamento da esquerda para direita da página*/
+    top: 40px; /*configuração em realção ao topo da página */
+
+}
+
+header#cabecalho {
+
+    /* foco em organizar as divisões do cabeçalho. */
+
+    border-bottom: 1px black solid; /* configurando a borda de baixo. cria-rá uma linha abaixo. a ordem é: Largura da borda, cor, formato da bordar*/ 
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 100px; /*usando uma imagem de background. Usando caminho da imagem no url("../ caminhop da imagem") e usando no-repeat para não replicar a imagem para um preenchimento do backgroud pelo tamanho da iamgem ser pequeno. ejustei depois do no-repeat o deslocamento lateral(0px) e deslocamento vertical (100px)*/
+
+}
+
+header#cabecalho h1 {
+
+/* criado para definições do h1, dentro do objeto h1 no cabeçalho*/
+
+    font-family: fontenova, sans-serif ; /* familia da fonte e seus parâmetros que pode ser usado ou não, bastando excluí-los,*/
+    text-shadow: 5px 5px 10px #bbbbbb ; /*Adição pŕopria para configuração de sombra na palavra h1 do cabeçalho*/
+    font-size: 100px; /* tamanho da fonte*/
+    color: black; /* cor da fonte*/
+    padding: 0px; /*difinição de local dentro do padding do conteiner hearder para h1*/
+    margin-top: 40px; /* adição minha para que o titulo h1 ficasse um pouco mais abaixo em relação ao menu e o "teto" da página*/
+
+    }
+
+header#cabecalho h2{
+
+ /*criado para definições do h2, dentro do objeto h2 no cabeçalho*/
+
+    font-family: Arial, Helvetica, sans-serif; /* Não observei diferença deixando completo, em relação ao da tag h1.*/
+    color: black; /* cor do texto h2*/
+    font-size: 15pt; /* tamanho usei em pontos e não em pixels, não entendi bem a diferença*/
+    padding: 0px; /*difinição de local dentro do padding do conteiner hearder para h2*/
+    padding-left: 210px; /* Adionando localização da esquerda para direita. adição prórpia*/
+    margin-top: -80px; /* ordinazando loalização de baixo para cima dentro margem do container. Adição pŕopria*/
+
+}
+
+
+
+
+    /* formatação da imagem com legenda*/
+
+    figure.foto-legenda{
+        position: relative; /* o posicionamento de qualquer coisa no site estará relativa ao seu local*/
+        border: 8px solid white;
+        box-shadow: 1px 1px 4px black;
+    }
+
+    figure.foto-legenda img{
+
+        /* relacionado apenas as imagens .img*/
+
+        width: 100%;
+        height: 100%;
+    }
+
+    figure.foto-legenda figcaption{
+
+        /* relacionado a TAG figcaption*/
+
+        position: absolute;
+        top: 0px; /*como no conateiner mãe(figure) está o position ocmo relativo, essa posição colocará a posição do figcaption dentro do conteiner dele, na parte superior, e não superior ao site.*/
+        background-color: rgba(0,0,0,0.4); /*criando mascará de transparÊncia*/
+        color: white; /*cor da letra*/
+        width: 100%; /*altura do preenchimento da mascara escura, sobre o conteiner*/
+        height: 100%; /*largura do preenchimento da mascara escura, sobre o conteiner*/
+        padding: 10px; /*cria um espaço entre a borda e o conteúdo*/
+        box-sizing: border-box; /*cria um box dentro da borda*/
+        opacity: 0; /*esconde-rá as todas as configurações do figcaption*/
+        transition: 1s; /*tempo de transição da opacidade*/
+    }
+
+    figure.foto-legenda:hover figcaption{
+
+        /*configuração de opacidade para que seja mostrado algo quando o muse passar pelo obsejto configurado no figcapture*/
+
+        opacity: 1;
+    }
+
+    /*formatação do Menu*/
+
+    /* usar # para dizer qual o menu quer modificar, caso tenha mais de um*/
+
+    nav#menu{
+
+        display: block; /*necessário para o container todo, no caso o MENU ficar flutuante*/
+    }
+    
+    
+    nav#menu ul{ /*foco na formatação da UL apenas*/
+
+        list-style: none; /* tira a formatação do menu (numerações e afins)*/
+        text-transform: uppercase; /*deixa o texto em maiúsculo*/
+        position: absolute; /* nesta configuração pode-se colocar em qualquer lugar do site, estravaza o conatiner em que está inserido*/
+        top: -20px; /* como o position está em absulute, ele ira para cima do site. Zero(0) e margem acima máxima padrão do site, pré configurado. podemos usar (-20px) para ir ainda mais pra cima*/
+        left: 600px; /* como o position está como absolute, irá para esquerda do site*/
+
+    }
+
+    nav#menu li{ /*foco na formatação da LI apenas*/
+
+        display: inline-block; /*Coloca a formatação do bloco em linha, tirando da vertical e pondo na horizontal*/
+        background-color: #dddd;
+        padding: 10px; /*espaço interno em cada LI*/
+        margin: 4px; /*espaço externo do conteiner*/
+        transition: background-color 1s; /*transição quando se passar o mause, conectado a tag nav#menu li:hover*/
+
+
+    }
+
+    nav#menu li:hover{ /* configurando efeitos no Menu atrvés de tag no Li, referente ao Menu*/
+
+        background-color:#606060; /*mundando valor do Li, para está cor quando passar o Muse*/
+
+
+    }
+
+
+    nav#menu h1{
+
+        display: none;
+
+    }
+
+    nav#menu a{
+
+        color: black; /* alterando cor da letra do menu com link*/
+        text-decoration: none; /*tirando o sublinhado do texo no menu*/
+
+
+    }
+
+    nav#menu a:hover{ /*efeito de cor da letra após o muse passar por cima do menu*/
+
+
+        color: white; /* mudando cor do efeito da letra para branco*/
+        text-decoration: overline;
+        
+
+    }
+
+
+    /* configurações da <section> (corpo)*/
+
+    section#corpo{
+
+        display: block; /* muito importante. Com isso a página ou tag será mostrada como um bloco.*/
+        width: 600px; /*largura do bloco de cima*/
+        float: left; /* usado para colcoar a tag para esquerda. o bloco flutuará para esquerda da página*/
+        border-right: 1px solid black; /* cria uma linha na bordar á direita do section. na seguencia de: espessura, modelo da linha e cor*/
+        padding-right: 30px; /* na configuração do boarder-right o texto colou na linha. Afastando-o da linha com o padding-right*/
+        padding-left: 30px; /* na configuração do boarder-left o texto colou na linha. Afastando-o da linha com o padding-left*/
+        margin-right: 5px; /* espaçamento da margem direita para esquerda*/
+        margin-left: 5px; /* espaçamento da margem esquerda para diretira*/
+    }
+
+    /*Fortação do <article> - seção ou seçõesd e artigos*/
+
+   header#cabeartigo h1{ /* configuração do H1, na Tag <header>, dentro da tag <article>, dentro da tag <section>*/
+
+        font-family: 'Times New Roman', Times,sans-serif; 
+        font-size: 20pt; /*Tamanho da fonte*/
+        color: black; /*Cor da fonte*/
+        margin-bottom: -5px; /*colando o H1, no título do cabeçalho*/
+
+
+   }
+
+   header#cabeartigo h3{ /* configuração do H3, na Tag <header>, dentro da tag <article>, dentro da tag <section>*/
+
+    font-family: 'Times New Roman', Times,sans-serif; 
+    font-size: 14pt; /*Tamanho da fonte*/
+    color: black; /*Cor da fonte*/
+    
+
+
+    }
+
+    header#cabeartigo h3.outro { /* configuração do H4, na Tag <header>, dentro da tag <article>, dentro da tag <section>*/
+
+    font-family: 'Times New Roman', Times,sans-serif; 
+    font-size: 9pt; /*Tamanho da fonte*/
+    color: black; /*Cor da fonte*/
+    text-align: right; /*alinhamento do texto da esquerda para direito, uo vice versa*/
+
+    }
+   
+   
+   
+    article#noticia-principal h2{ /*formatando todos os h2 dos artigos*/
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12pt; /*tamanho da fonte*/
+        color: black; /* Cor do texto*/
+        background-color: #dddd; /*Cor de fundo*/
+        padding: 5px 0px 5px 0px; /*espaçamento interno entre a margem e o conteúdo. Ordem: Cima - direita -baixo-esquerda*/
+        margin: 10px 260px 10px 0px; /*espaçamento externo entre a margem e o conteúdo. Ordem: Cima - direita -baixo-esquerda*/
+
+    }
+
+        img#foto1index { /* ajunstando a imagem <img> da tag <article>*/
+
+            margin-left: 150px;
+
+        }
+
+
+
+    /*Configurações da Tabela contida na página principal*/
+
+    table#tabela caption { /*Configuração do Título da tabela*/
+
+        font-size: 15pt; /*Tamanho da fonte*/
+
+
+    }
+
+    table#tabela caption span{ /*Configuração de um <span> específico dentro do título da tabela*/
+
+        display: block; /*Será mostrado com um bloco flutuante. será desconectado do texto. Já visto antes para outras configurações*/
+        float: right; /*flutuação a direita*/
+        font-size: 8px; /* tamanho da fonte*/
+
+
+
+    }
+
+
+
+    table#tabela { /* Formatação geral da tabela*/
+
+        border: 1px solid #606060; /*Configuração das bordas EXTERNA. Sequencia: Esssura da linha, tipo da linha e cor*/
+        margin-left: auto; /*Centralizando a tabela para esquerda*/
+        margin-right: auto; /*Centralizando a tabela para direita*/
+
+
+    }
+
+    table#tabela td{ /*formatação do objeto <td></td> contido na tabela*/
+
+        border: 1px dashed #606060; /*Configuração das bordas das tags <td></td>. Sequencia: Esssura da linha, tipo da linha e cor*/
+        padding: 5px; /*Aumenta o espaço interno de cada celular <td>*/
+
+    }
+
+    table#tabela td.esquerda { /* configurações da tag <td> class = "esquerda"*/
+
+        color: white; /* cor da letra*/
+        background-color: rgb(119, 119, 233); /*Cor de fundo*/
+        text-align: right; /* Alinhamento todo a direita*/
+        font-weight: bold; /*Letra em Negrito*/
+
+    }
+
+    table#tabela td.direita { /* configurações da tag <td> class = "direita"*/
+
+        text-align: left; /* Alinhamento todo a esquerda*/
+
+    }
+
+    
+
+
+    /* configurações da <aside> (lateral)*/
+
+    aside#lateral{
+
+        display: block; /* muito importante. Com isso a página ou tag será mostrada como um bloco.*/
+        width: 310px; /*largura do bloco. ideia é ficar um pouco menor que a largura da <section>*/
+        float: right; /* usado para colocar a tag para direita. o bloco flutuará para direita da página*/
+        padding: 10px 10px 10px 10px ; /* Configuração de espaçamento interno. Ordem: Cima-Esquerda-Baixo-Esquerda*/
+        padding-right: 30px;
+        padding-left: 30px;
+        margin-top: 10px; /*Espaçamento superio entre o cabeçalho e o quadrante da tag ,aside>*/
+        margin-right: 30px; /* espaçamento da margem direita para esquerda*/
+        /*margin-left: 5px; /* espaçamento da margem esquerda para diretira*/
+        background-color: #dddd; /* cor do <aside>*/
+        box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5); /*configura um degradê na borda do conteiner ordem: deslocamento lateral, deslocamento vertical, espalahemtno da sombra e cor da sombra*/
+
+    }
+
+    aside#lateral h1{ /*formatação do <aside> H1 */
+
+
+        font-family: 'Times New Roman', Times, sans-serif;
+        font-size: 20pt; /* tamanho da fonte*/
+        color: black; /* cor da letra*/
+
+
+    }
+
+    aside#lateral h2{ /*formatação do <aside> H2 */
+
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14pt; /*tamanho da fonte*/
+        color: white; /*cor da letra*/
+        text-align:center; /*alinhamento ao centro do texto */
+        padding: 5px 0px 5px 0px; /*Configuração das margens internas*/
+        margin: 10px 0px 10px 0px; /*Configuração das margens externas*/
+        background-color: #606060; /*cor de fundo*/
+        
+
+
+    }
+
+
+    /* configurações da <footer> (rodapé)*/
+
+    footer#rodape {
+
+        clear: both; /* limpa as seções divididas de ASIDE e SECTION. Ou seja, o FOOTER fica fora desta configuração, logo obedece as configurações da página e não das tags mencionadas.*/
+        border-top: 1px solid black; /* cria uma linha na bordar ácima do FOOTER. na seguencia de: espessura, modelo da linha e cor*/
+
+    }
+
+    footer#rodape p {
+
+        text-align: center; /* Alinhando texto <p>, configirado em html5, para que através deste comando ele seja centralizado na página*/
+
+
+    }

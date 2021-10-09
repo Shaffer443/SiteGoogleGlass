@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+form{
+
+    width: 900px; /*largura*/
+    margin: auto; /* distancia automática*/
+    
+
+}
+
+input, textarea{ /* as configurações valem tanto para o input como para o textarea. porém, pode ser colocados separados*/
+
+    font-family: sans-serif; /*fonte sem serifa*/
+    font-weight: normal; /* para que a fonte não fique em negrito*/
+    font-size: 13pt; /* tamanho da fonte*/
+    background-color;: rgba(255, 255,255,.8) /* deixar o fundo transparente, um pouco, para que as imagens não sejam cortadas, caso fiquem atrás de algum campo*/
+
+}
+
+    input:hover, textarea:hover{ /* ao passar o mouse*/
+                                    /* as configurações valem tanto para o input como para o textarea. porém, pode ser colocados separados*/
+
+        background-color: #dddd; /* cor de fundo da ação*/
+
+    }
+
+
+legend{ /* configuração das legend, no caso, titulos dos campus*/
+
+    color: grey; /* cor do texto*/
+    font-weight: bold; /* fonte em negrito*/
+    font-size: 13pt; /* tamanho da fonte*/
+    font-family: sans-serif; /* fonte sem serifa*/
+
+
+}
+
+fieldset { /*ajustes gerais do fieldset*/
+
+    border-color: #cecece; /* cor da bordas*/
+    margin: 20px;
+    
+
+
+}
+
+    fieldset#sexo{ /* configuração do fieldset especifico: sexo*/
+
+        width: 250px; /* largura da área*/
+        margin-left: 50px; /* Usado para alinhar a caixa com o texto do campo*/
+
+
+    }
+
+        fieldset#usuario{
+
+            background: url(../_imagens/icone-contato.png) no-repeat 95% 95%; /* uma imagem como fundo do campo, e no-repeat para que ele não duplique a imagem na hora de preencher*/
+            /* 95% - lateral e 95% vertical*/
+        
+        }
+
+            fieldset#endereco{
+
+                background: url(../_imagens/icone-endereco.png) no-repeat 95% 95%; /* uma imagem como fundo do campo, e no-repeat para que ele não duplique a imagem na hora de preencher*/
+                /* 95% - lateral e 95% vertical*/
+        
+            }
+
+                fieldset#mensagem{
+
+                    background: url(../_imagens/icone-mensagem.png) no-repeat 100% 95%; /* uma imagem como fundo do campo, e no-repeat para que ele não duplique a imagem na hora de preencher*/
+                    /* 100% - lateral e 95% vertical*/
+                    
+        
+                }
+
+                    fieldset#pedido{
+
+                        background: url(../_imagens/icone-pagamento.png) no-repeat 95% 95%; /* uma imagem como fundo do campo, e no-repeat para que ele não duplique a imagem na hora de preencher*/
+                        /* 95% - lateral e 95% vertical*/
+                    
+        
+                    }
+

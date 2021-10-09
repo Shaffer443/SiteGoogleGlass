@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+div#tvradio {
+
+    width: 900px; /* Largura*/
+    height: 580px; /* altura*/
+    margin: auto;
+    background: url("../_imagens/radio-tv.png") no-repeat; /* no-repeat indica que mesmo que haja algum problema, só uma arquivo de backgraound será exibido*/
+
+
+}
+
+        audio#musica {
+
+            display: block; /* display ser exibido como um bloco*/
+            position: relative;
+            left: 574px; /*Ajustado de acordo com encaixe na imagem do rádio no backgroud*/
+            top: 490px; /*Ajustado de acordo com encaixe na imagem do rádio no backgroud*/
+            width: 300px; /* largura, em relação onde ele tem que ficar no background do rádio*/
+            
+
+        }
+
+                video#filme {
+
+                    display: block; /* display ser exibido como um bloco*/
+                    position: relative;
+                    left: 50px; /*Ajustado de acordo com encaixe na imagem da TV no backgroud*/
+                    top: 70px; /*Ajustado de acordo com encaixe na imagem da TV no backgroud*/
+                    width: 500px; /* largura, em relação onde ele tem que ficar no background da TV*/
+
+                }

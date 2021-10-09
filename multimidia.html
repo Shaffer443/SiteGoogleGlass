@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+	<meta charset="UTF-8"/>
+	<title>Tudo Sobre Google Glass</title>
+
+	<link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+	<link rel="stylesheet" type="text/css" href="_css/media.css"/>
+
+
+</head>
+
+<script lang="javascript" src="_javascript/funcoes.js">
+
+</script>
+
+<body>
+	<div id="interface">
+
+<header id="cabecalho">
+
+<hgroup>
+<h1>Google Glass</h1>
+<h2>A revolução do Google está chegando</h2>
+</hgroup>
+
+<img id= "icone" src="_imagens/multimidia.png">
+
+<nav id="menu">  
+	<h1>Menu Principal</h1>
+	<ul>
+	<li onmouseover="mudafoto('_imagens/home.png')" onmouseout="mudafoto('_imagens/multimidia.png')"><a href="index.html" target="_self">Home</a></li>
+	<li onmouseover="mudafoto('_imagens/especificacoes.png')" onmouseout="mudafoto('_imagens/multimidia.png')"><a href="specs.html">Especificações</a></li>
+	<li onmouseover="mudafoto('_imagens/fotos.png')" onmouseout="mudafoto('_imagens/multimidia.png')"><a href="fotos.html">Fotos</a></li>
+	<li onmouseover="mudafoto('_imagens/multimidia.png')" onmouseout="mudafoto('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
+	<li onmouseover="mudafoto('_imagens/contato.png')" onmouseout="mudafoto('_imagens/multimidia.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+	</ul>
+</nav>
+
+</header>
+
+
+<section id="corpo-full"> <!--Uma nova sessão para um página completa, sem divisões-->
+	<article id="noticia-principal"> 	
+
+
+		<header id="cabeartigo">
+		
+			<hgroup>
+		
+				<h3>Glass > Multimídia</h3>
+				<h1>Sons e Vídeos</h1>
+				<h2>por Rafael Gouveia</h2>
+				<h3 class="outro">Atualizado em 01/Maio/2013</h3>
+		
+			</hgroup>
+		</header>
+
+		<div id="tvradio"> <!-- Div criada para áudio e vídeo em divisão-->
+
+			<audio id="musica" controls> <!--Obrigatótio usar o controls para aparecer os controles de audio e video. Pode aparecer diferente em cada navegador-->
+				
+				<source src="_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg"/> <!--Pode precisar mudar a extenção do arquivo, dependendo do navegador (mp4/ogg/mp3/outros)-->
+
+			</audio>
+			<video id="filme" controls poster="_imagens/video-mini03.jpg"> <!--Adiconado um "poster", uma imagem que aparece quando não estiver sendo usado o pleyer-->
+
+				<source src="_media/getting-started.mp4" type="video/mp4"/> <!--Observar o "TYPE" do arquivo-->
+
+			</video>
+
+
+
+		</div>
+
+
+
+
+</article>
+</section>
+
+<footer id="rodape">
+
+    <p>Copyright &copy; <s>2013</s> 2021 - by <u>Rafael Gouveia.</u><br>
+        <a href="https://www.instagram.com/rafaelgouveiashaffer/" target="_blank">Instagram</a> | <a href="https://twitter.com/RafaelGouveiaM" target="_blank">Twitter</a> | <a href="https://github.com/Shaffer443" target="_blank">Git Hub</a></p>
+    
+    </footer>
+    
+    </div>
+    </body>
+    </html>

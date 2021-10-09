@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+	<meta charset="UTF-8"/>
+	<title>Tudo Sobre Google Glass</title>
+
+	<link rel="stylesheet" type="text/css" href="_css/estilo.css"/> <!-- Link de carregamento do CSS padrão da página-->
+	<link rel="stylesheet" href="_css/specs.css"/> <!-- Link de carregamento do CSS padrão da specs.html-->
+
+</head>
+
+<script lang="javascript" src="_javascript/funcoes.js">
+
+</script>
+
+<body>
+	<div id="interface">
+
+<header id="cabecalho">
+
+<hgroup>
+<h1>Google Glass</h1>
+<h2>A revolução do Google está chegando</h2>
+</hgroup>
+
+<img id= "icone" src="/home/shaffer/Documentos/Curso Em Vídeo/projeto-glass-html5/_imagens/glass-oculos-preto-peq.png">
+
+<nav id="menu">  
+	<h1>Menu Principal</h1>
+	<ul>
+	<li onmouseover="mudafoto('_imagens/home.png')" onmouseout="mudafoto('_imagens/especificacoes.png')"><a href="index.html" target="_self">Home</a></li>
+	<li onmouseover="mudafoto('_imagens/especificacoes.png')" onmouseout="mudafoto('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>
+	<li onmouseover="mudafoto('_imagens/fotos.png')" onmouseout="mudafoto('_imagens/especificacoes.png')"><a href="fotos.html">Fotos</a></li>
+	<li onmouseover="mudafoto('_imagens/multimidia.png')" onmouseout="mudafoto('_imagens/especificacoes.png')"><a href="multimidia.html">Multimídia</a></li>
+	<li onmouseover="mudafoto('_imagens/contato.png')" onmouseout="mudafoto('_imagens/especificacoes.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+	</ul>
+</nav>
+
+</header>
+
+<section id="corpo-full"> <!--Uma nova sessão para um página completa, sem divisões-->
+	<article id="noticia-principal"> 	
+
+
+		<header id="cabeartigo">
+		
+			<hgroup>
+		
+				<h3>Glass > Especificações</h3>
+				<h1>Raio-X no Google Glass</h1>
+				<h2>por Rafael Gouveia</h2>
+				<h3 class="outro">Atualizado em 01/Maio/2013</h3>
+		
+			</hgroup>
+		</header>
+
+
+				 <p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
+
+					<section id="conteudo">
+
+						<img src="/home/shaffer/Documentos/Curso Em Vídeo/projeto-glass-html5/_imagens/glass-esquema-marcado.jpg" usemap="#meumapa">
+						<!--Criando um mapa da imagem acima. o Mapa pode estar em qualquer parte do documento html-->
+
+							<map name="meumapa">
+								<!--Todo mapa precisa de um shape e sua coordenada para ser localizado no mapa da imagem-->
+								<!--Shape=círculo,retangulo ou poligonal - coordoucoordenadas=valores de X e Y do pontos sensiveis da imagem, localizados atravésd e qualquer editor de imagem - href=caminho da página html e '#'' é o local da tag alvo dentro. target = alvo do ifreme nomeado no exercício.-->
+								
+								<area shape="rect" coords="179,202,270,260" href="_textos/google-glass-txt.html#tela" target="janela">
+								<area shape="circle" coords="158,243,12" href="_textos/google-glass-txt.html#camera" target="janela">
+								<area shape="circle" coords="73,52,12" href="_textos/google-glass-txt.html#bateria" target="janela">
+								<area shape="circle" coords="28,143,83,216,84249,27,169" href="_textos/google-glass-txt.html#gedgets" target="janela">
+
+							</map>
+
+						<!-- Abaixo vamos inserir o <IFRAME></IFRAME>, onde, neste caso, vamos selecionar o html que contém as informações que queremos expôr-->
+						
+						<iframe src="/home/shaffer/Documentos/Curso Em Vídeo/projeto-glass-html5/_textos/google-glass-txt.html" name="janela" id="frame-spec" scrolling="no"></iframe>
+
+
+
+					</section>
+
+
+
+	</article>
+
+</section>
+
+<footer id="rodape">
+
+    <p>Copyright &copy; <s>2013</s> 2021 - by <u>Rafael Gouveia.</u><br>
+        <a href="https://www.instagram.com/rafaelgouveiashaffer/" target="_blank">Instagram</a> | <a href="https://twitter.com/RafaelGouveiaM" target="_blank">Twitter</a> | <a href="https://github.com/Shaffer443" target="_blank">Git Hub</a></p>
+    
+    </footer>
+    
+    </div>
+    </body>
+    </html>
